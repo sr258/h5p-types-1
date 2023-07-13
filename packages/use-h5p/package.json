@@ -2,6 +2,7 @@
   "name": "use-h5p",
   "version": "2.0.0",
   "description": "React Hooks to be used with H5P",
+  "type": "module",
   "main": "dist/index.cjs",
   "types": "dist/index.d.cts",
   "files": [
@@ -21,7 +22,6 @@
       }
     }
   },
-  "type": "module",
   "scripts": {
     "test": "vitest run",
     "test:watch": "vitest",

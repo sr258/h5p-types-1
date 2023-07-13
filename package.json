@@ -1,6 +1,7 @@
 {
   "name": "h5p-types-root",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "prettier": "prettier .",

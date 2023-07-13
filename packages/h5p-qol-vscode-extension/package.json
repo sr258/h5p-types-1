@@ -6,6 +6,7 @@
   "repository": {
     "url": "https://github.com/boyum/h5p-types.git"
   },
+  "type": "module",
   "description": "Quality of life improvements for H5P development in VSCode",
   "version": "0.1.0",
   "engines": {

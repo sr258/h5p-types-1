@@ -2,6 +2,7 @@
   "name": "h5p-json-schemas",
   "version": "1.0.0",
   "description": "Schemas for H5P related JSON files",
+  "type": "module",
   "scripts": {
     "generate-base": "typescript-json-schema --skipLibCheck --strictNullCheck --required index.d.ts",
     "generate:library": "npm run generate-base -- H5PLibrary -o public/library.schema.json",
