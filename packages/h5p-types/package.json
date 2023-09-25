@@ -1,6 +1,6 @@
 {
   "name": "h5p-types",
-  "version": "2.0.1",
+  "version": "4.0.1",
   "type": "module",
   "types": "index.d.ts",
   "files": [
@@ -10,23 +10,22 @@
   "scripts": {
     "publish-to-npm": "release-it",
     "typecheck": "tsc --noEmit",
-    "typecheck:ts-4": "tsc --project ./tsconfig.ts-4.json --noEmit",
     "lint:check": "eslint .",
     "lint:fix": "npm run lint:check -- --fix"
   },
   "dependencies": {
-    "@types/jquery": "^3.5.16",
-    "type-fest": "^3.13.0"
+    "@types/jquery": "^3.5.19",
+    "type-fest": "^4.3.1"
   },
   "devDependencies": {
-    "@release-it/conventional-changelog": "^7.0.0",
+    "@release-it/conventional-changelog": "^7.0.2",
     "eslint-config-base": "*",
     "release-it": "^16.1.5",
     "tsconfig-base": "*",
-    "typescript": "^4.9.5"
+    "typescript": "^5.0.4"
   },
   "peerDependencies": {
-    "typescript": ">= 4.7.x"
+    "typescript": ">= 5.0.4"
   },
   "repository": {
     "type": "git",

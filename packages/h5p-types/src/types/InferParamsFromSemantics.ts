@@ -1,7 +1,9 @@
 import type { ReadonlyDeep } from "type-fest";
-import type { H5PField, H5PFieldGroup } from "./H5PField";
-import type { InferL10nType } from "./InferL10nType";
+import type { H5PField } from "./H5PField";
+import type { InferL10nType, L10nGroupWithoutLabel } from "./InferL10nType";
 import type { InferOptionalWithDefault } from "./InferParamTypeFromFieldType";
+
+type H5PFieldWithoutLabel = Omit<H5PField, "label">;
 
 /**
  * Infer the params type from a semantics array.
@@ -40,14 +42,15 @@ import type { InferOptionalWithDefault } from "./InferParamTypeFromFieldType";
  *  ```
  */
 export type InferParamsFromSemantics<
-  TSemantics extends ReadonlyArray<ReadonlyDeep<H5PField>>,
-> = TSemantics extends readonly [infer TField, ...infer TRestFields]
-  ? TField extends ReadonlyDeep<H5PField>
-    ? TRestFields extends ReadonlyArray<ReadonlyDeep<H5PField>>
-      ? (TField extends ReadonlyDeep<H5PFieldGroup & { name: "l10n" }>
-          ? InferL10nType<TField>
-          : Record<TField["name"], InferOptionalWithDefault<TField>>) &
-          InferParamsFromSemantics<TRestFields>
-      : unknown
-    : unknown
+  TSemantics extends ReadonlyArray<ReadonlyDeep<H5PFieldWithoutLabel>>,
+> = TSemantics extends readonly [
+  infer TField extends ReadonlyDeep<H5PFieldWithoutLabel>,
+  ...infer TRestFields extends ReadonlyArray<
+    ReadonlyDeep<H5PFieldWithoutLabel>
+  >,
+]
+  ? (TField extends ReadonlyDeep<L10nGroupWithoutLabel>
+      ? InferL10nType<TField>
+      : Record<TField["name"], InferOptionalWithDefault<TField>>) &
+      InferParamsFromSemantics<TRestFields>
   : unknown;

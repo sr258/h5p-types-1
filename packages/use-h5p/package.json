@@ -48,21 +48,21 @@
   },
   "homepage": "https://github.com/boyum/h5p-types/tree/main/packages/use-h5p#readme",
   "devDependencies": {
-    "@release-it/conventional-changelog": "^7.0.0",
+    "@release-it/conventional-changelog": "^7.0.2",
     "@testing-library/react": "^14.0.0",
-    "@types/node": "^20.5.0",
-    "@types/react": "^18.2.20",
+    "@types/node": "^20.6.5",
+    "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
     "eslint-config-react": "*",
     "h5p-types": "*",
     "h5p-utils": "*",
-    "happy-dom": "^10.10.0",
+    "happy-dom": "^12.1.6",
     "react-dom": "^18.2.0",
     "release-it": "^16.1.5",
     "tsconfig-react": "*",
     "tsup": "^7.2.0",
-    "typescript": "^5.1.6",
-    "vitest": "^0.34.1"
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.5"
   },
   "peerDependencies": {
     "react": ">= 17.0.1"

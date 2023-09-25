@@ -12,7 +12,7 @@
     "test": "turbo run test",
     "build": "turbo run build",
     "typecheck": "turbo run typecheck",
-    "typecheck:ts-4": "turbo run typecheck:ts-4"
+    "update-deps": "ncu -u --deep"
   },
   "author": {
     "name": "Sindre Bøyum",
@@ -25,9 +25,10 @@
     "internal-utilities/*"
   ],
   "devDependencies": {
-    "prettier": "^3.0.2",
+    "npm-check-updates": "^16.14.4",
+    "prettier": "^3.0.3",
     "prettier-config": "github:boyum/prettier-config",
-    "turbo": "^1.10.12"
+    "turbo": "^1.10.14"
   },
   "prettier": "prettier-config"
 }
